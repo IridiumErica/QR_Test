@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Destinazione</title>
+</head>
+<body style="font-family:system-ui,sans-serif; padding:24px;">
+  <h1>Benvenuto! 👋</h1>
+  <p>Sei arrivato qui tramite QR code 📱</p>
+</body>
+</html>
