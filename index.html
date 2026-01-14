@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR Code</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  <style>
+    body{
+      margin:0;
+      display:grid;
+      place-items:center;
+      height:100vh;
+      font-family: system-ui, sans-serif;
+      background:#f4f4f4;
+    }
+    .card{
+      background:#fff;
+      padding:24px;
+      border-radius:16px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+      text-align:center;
+    }
+    #qrcode{ margin: 12px auto; width:256px; height:256px; }
+    .url{ font-size:14px; color:#444; word-break:break-all; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Scansiona il QR</h1>
+    <div id="qrcode"></div>
+    <div class="url" id="urlText"></div>
+  </div>
+
+  <script>
+    // ✅ cambia QUI l'URL di destinazione (pagina B)
+    const targetUrl = "https://TUO-USERNAME.github.io/qr-site/pagina-destinazione.html";
+
+    new QRCode(document.getElementById("qrcode"), {
+      text: targetUrl,
+      width: 256,
+      height: 256
+    });
+
+    document.getElementById("urlText").textContent = targetUrl;
+  </script>
+</body>
+</html>
